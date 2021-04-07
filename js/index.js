@@ -48,6 +48,12 @@ navButtons.forEach(element =>{
   navCounter++;
 })
 
-let ctaImg = document.getElementById("cta-img");
+const ctaHeader = document.querySelector(".cta-text h1");
+ctaHeader.textContent = siteContent["cta"].h1;
+
+const ctaButton = document.querySelector(".cta-text button");
+ctaButton.textContent = siteContent["cta"].button;
+
+const ctaImg = document.getElementById("cta-img");
 ctaImg.setAttribute('src', siteContent["cta"]["img-src"])
 
