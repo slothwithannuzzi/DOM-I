@@ -41,8 +41,12 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
-const navButtons = document.querySelectorAll('nav a')
-const navButtArr = Array.from(navButtons);
+const navButtons = document.querySelectorAll('nav a');
+let navCounter = 1;
+navButtons.forEach(element =>{
+  element.textContent = siteContent["nav"][`nav-item-${navCounter}`];
+  navCounter++;
+})
 
 let ctaImg = document.getElementById("cta-img");
 ctaImg.setAttribute('src', siteContent["cta"]["img-src"])
