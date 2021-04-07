@@ -45,6 +45,7 @@ const navButtons = document.querySelectorAll('nav a');
 let navCounter = 1;
 navButtons.forEach(element =>{
   element.textContent = siteContent["nav"][`nav-item-${navCounter}`];
+  element.style.color = 'green';
   navCounter++;
 })
 
@@ -87,3 +88,10 @@ const contactContent = document.querySelectorAll('.contact p');
 contactContent[0].textContent = siteContent['contact'].address;
 contactContent[1].textContent = siteContent['contact'].phone;
 contactContent[2].textContent = siteContent['contact'].email;
+
+const footerContent = document.querySelector('footer p');
+footerContent.textContent = siteContent['footer'].copyright;
+
+const navSystem = document.querySelector('nav');
+navSystem.prepend('prepend');
+navSystem.appendChild('Append');
